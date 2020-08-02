@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/wiki/test/</loc>
+    <loc>http://yoursite.com/wiki/vue/</loc>
     
-    <lastmod>2020-07-31T18:17:55.048Z</lastmod>
+    <lastmod>2020-08-02T09:00:03.944Z</lastmod>
     
   </url>
   
@@ -26,13 +26,6 @@
     <loc>http://yoursite.com/about/index.html</loc>
     
     <lastmod>2020-07-31T18:07:47.346Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/wiki/hello-world/</loc>
-    
-    <lastmod>2020-07-31T18:00:05.034Z</lastmod>
     
   </url>
   
