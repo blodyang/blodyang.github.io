@@ -198,7 +198,7 @@
                             &nbsp;
                             js
                         </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/js/">js</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/js/">js基础</a></li>  <li class="file"><a href="/wiki/js%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">js的数据类型</a></li>  <li class="file"><a href="/wiki/%E9%97%AD%E5%8C%85/">闭包</a></li>  <li class="file"><a href="/wiki/%E8%B7%A8%E5%9F%9F/">跨域</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -281,6 +281,313 @@
 </aside>
             
             <section id="main">
+        <article id="post-跨域" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/js/">js</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E8%B7%A8%E5%9F%9F/" rel="tag">跨域</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/%E8%B7%A8%E5%9F%9F/">
+            <time datetime="2020-08-20T08:47:29.000Z" itemprop="datePublished">2020-08-20</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/跨域.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/跨域.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/跨域.md'> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/%E8%B7%A8%E5%9F%9F/">跨域</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><ol>
+<li>不同域名 不同端口 不同协议  不同域名</li>
+<li>proxy 代理  jsonp  后端配置(常用)</li>
+</ol>
+<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">1、加载优化  </span><br><span class="line"> 静态资源加载优化，cdn or oss</span><br><span class="line"> 尽可能少的加载外联css、js代码，html头部，增加dsn-preftch，减少dns解析时间</span><br><span class="line"> 压缩css js pic，减小体积，服务端开启gzip压缩</span><br><span class="line"> 控制http请求</span><br><span class="line"> js加载脚本阻塞浏览器主线程，考虑异步， 如 async</span><br><span class="line"> 利用好缓存，利用好http响应头缓存字段，开启静态资源缓存</span><br><span class="line">2、浏览器渲染</span><br><span class="line"> css层不要太深，避免最内层使用统配选择器</span><br><span class="line"> js脚本不要太复杂，减少js解析时间，少引用复杂的第三方脚本</span><br><span class="line"> 模块按需加载，按需打包，首页仅仅加载和执行和首屏相关的脚本，其他脚本延迟加载</span><br><span class="line"> 第三方包需不需 要精简</span><br><span class="line"> 打包优化，code split webpack</span><br><span class="line"></span><br><span class="line">3，缓存</span><br><span class="line"> 内存  响应资源放入内存，直接读取，无需线程转换， 消耗资源</span><br><span class="line"> 客户端缓存</span><br><span class="line"> HTTp缓存   catche-control与服务器进行数据协商，根据标准缓存活着更新资源</span><br><span class="line"> 网络相关的缓存  一般指dns解析结果的缓存或者预连接缓存，创建一个https成本很大</span><br><span class="line"> cdn  根据用户ip地址及请求的url选择一台距离用户比较近的资源缩短路径，提升性能  </span><br><span class="line"> localstorage缓存html文档首次访问页面时，js执行完后会生成完整的html文档，缓存到localstorage里面  </span><br><span class="line"></span><br><span class="line">浏览器js占用大量时间</span><br><span class="line"></span><br><span class="line">LINUX命令将一个文件夹里面的所有文件复制到指定文件里     cp -r &#x2F;root&#x2F;XXX&#x2F;Account&#x2F;. &#x2F;ftp&#x2F;ZJNX</span><br></pre></td></tr></table></figure>
+<p>
+                
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/wiki/%E8%B7%A8%E5%9F%9F/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-闭包" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/js/">js</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/%E9%97%AD%E5%8C%85/" rel="tag">闭包</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/%E9%97%AD%E5%8C%85/">
+            <time datetime="2020-08-20T08:45:50.000Z" itemprop="datePublished">2020-08-20</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/闭包.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/闭包.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/闭包.md'> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/%E9%97%AD%E5%8C%85/">闭包</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><h3 id="闭包的作用"><a href="#闭包的作用" class="headerlink" title="闭包的作用"></a>闭包的作用</h3><h6 id="一个函数可以访问外部函数的内部变量，构成一个闭包环境-函数嵌套-引用外部函数变量，-内部函数有一个对象，存储外部被引用的变量"><a href="#一个函数可以访问外部函数的内部变量，构成一个闭包环境-函数嵌套-引用外部函数变量，-内部函数有一个对象，存储外部被引用的变量" class="headerlink" title="一个函数可以访问外部函数的内部变量，构成一个闭包环境(函数嵌套  引用外部函数变量，  内部函数有一个对象，存储外部被引用的变量)"></a>一个函数可以访问外部函数的内部变量，构成一个闭包环境(函数嵌套  引用外部函数变量，  内部函数有一个对象，存储外部被引用的变量)</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">闭包的生命周期：在嵌套的内部函数成为垃圾对象时</span><br><span class="line">也就是不再被引用</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">闭包作用</span><br><span class="line"></span><br><span class="line">1. 变量维持的内存中</span><br><span class="line">2. 保护内部变量，以防造成污染</span><br><span class="line">   - 但是会造成内存泄露</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">使用场景---自定义js模块  </span><br><span class="line"></span><br><span class="line">开发中经常用到的函数，格式化时间日期的，判断是否是数字的等等，封装到一个模块里面，  </span><br><span class="line">在需要使用的地方引入。不能直接访问内部的东西，但是可以通过暴露接口给外部，操作内部的数据</span><br></pre></td></tr></table></figure>
+
+<p>
+                
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/wiki/%E9%97%AD%E5%8C%85/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-js的数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/js/">js</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/js%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+            <time datetime="2020-08-20T06:02:09.000Z" itemprop="datePublished">2020-08-20</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/js的数据类型.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/js的数据类型.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a target="_blank" rel="noopener" href='https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/js的数据类型.md'> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/js%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">js的数据类型</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><p>### ES 6为止,7种类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">数值（number）：整数和小数（比如<span class="number">1</span>和<span class="number">2.2</span>）</span><br><span class="line">字符串（string）：文本（比如Everybody Loves Eileen）。</span><br><span class="line">布尔值（boolean）：表示真伪的两个特殊值，即<span class="literal">true</span>（真）和<span class="literal">false</span>（假）</span><br><span class="line"><span class="literal">undefined</span>：表示“未定义”或不存在，即由于目前没有定义，所以此处暂时没有任何值</span><br><span class="line"><span class="literal">null</span>：表示空值，即此处的值为空</span><br><span class="line">对象（object）：各种值组成的集合</span><br><span class="line"><span class="built_in">Symbol</span>：独一无二的值，可以保证不会与其他属性名产生冲突</span><br></pre></td></tr></table></figure>
+
+<p>### 内置的类型识别方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> 运算符</span><br><span class="line"><span class="keyword">instanceof</span> 运算符</span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call() </span><br></pre></td></tr></table></figure>
+<p>
+                
+            
+        
+        
+            </div>   
+            <div class="article-more-link">
+                <a href="/wiki/js%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
         <article id="post-js" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -329,7 +636,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/wiki/js/">js</a>
+            <a class="article-title" href="/wiki/js/">js基础</a>
         </h1>
     
 
@@ -401,7 +708,7 @@
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link-link" href="/tags/vue/" rel="tag">vue</a>, <a class="tag-link-link" href="/tags/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" rel="tag">生命周期</a>
+        <a class="tag-link-link" href="/tags/vue/" rel="tag">vue</a>
     </div>
 
                         
