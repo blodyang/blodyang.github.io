@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-21T02:40:49.958Z</updated>
+  <updated>2020-08-21T02:58:24.018Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MVVM</title>
+    <link href="http://yoursite.com/wiki/MVVM/"/>
+    <id>http://yoursite.com/wiki/MVVM/</id>
+    <published>2020-08-21T02:47:35.000Z</published>
+    <updated>2020-08-21T02:58:24.018Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="对MVVM的理解"><a href="#对MVVM的理解" class="headerlink" title="对MVVM的理解"></a>对MVVM的理解</h2><h3 id="MVVM分为Model、View、ViewModel三者"><a href="#MVVM分为Model、View、ViewModel三者" class="headerlink" title="MVVM分为Model、View、ViewModel三者"></a>MVVM分为Model、View、ViewModel三者</h3><ul><li>Model：代表数据模型，数据和业务逻辑都在Model层中定义</li><li>View：代表UI视图，负责数据的展示</li><li>ViewModel：就是与界面(view)对应的Model。因为，数据库结构往往是不能直接跟界面控件一一对应上的，所以，需要再定义一个数据对象专门对应view上的控件。而ViewModel的职责就是把model对象封装成可以显示和接受输入的界面数据对象</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Model和View并无直接关联，而是通过ViewModel来进行联系的，Model和ViewModel之间有着双向数据绑定的联系。</span><br><span class="line">因此当Model中的数据改变时会触发View层的刷新，View中由于用户交互操作而改变的数据也会在Model中同步。</span><br></pre></td></tr></table></figure><h3 id="ViewModel就是View与Model的连接器，View与Model通过ViewModel实现双向绑定"><a href="#ViewModel就是View与Model的连接器，View与Model通过ViewModel实现双向绑定" class="headerlink" title="ViewModel就是View与Model的连接器，View与Model通过ViewModel实现双向绑定"></a>ViewModel就是View与Model的连接器，View与Model通过ViewModel实现双向绑定</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;对MVVM的理解&quot;&gt;&lt;a href=&quot;#对MVVM的理解&quot; class=&quot;headerlink&quot; title=&quot;对MVVM的理解&quot;&gt;&lt;/a&gt;对MVVM的理解&lt;/h2&gt;&lt;h3 id=&quot;MVVM分为Model、View、ViewModel三者&quot;&gt;&lt;a href=&quot;#M
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/categories/vue/"/>
+    
+    
+      <category term="mvvm" scheme="http://yoursite.com/tags/mvvm/"/>
+    
+  </entry>
   
   <entry>
     <title>promise</title>

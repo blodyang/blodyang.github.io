@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/wiki/MVVM/</loc>
+    
+    <lastmod>2020-08-21T02:58:24.018Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/wiki/promise/</loc>
     
     <lastmod>2020-08-21T02:40:49.958Z</lastmod>
