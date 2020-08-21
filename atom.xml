@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-21T02:17:56.622Z</updated>
+  <updated>2020-08-21T02:40:49.958Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/wiki/promise/"/>
     <id>http://yoursite.com/wiki/promise/</id>
     <published>2020-08-21T02:08:35.000Z</published>
-    <updated>2020-08-21T02:17:56.622Z</updated>
+    <updated>2020-08-21T02:40:49.958Z</updated>
     
     <content type="html"><![CDATA[<h4 id="基本介绍-异步promise"><a href="#基本介绍-异步promise" class="headerlink" title="基本介绍 异步promise"></a>基本介绍 异步promise</h4><p>Promise是ES6中新增的构造器。它主要用来优化实现异步操作的另一种方式。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// nodjs文件读写</span></span><br><span class="line">fs.readFile(路径，utf8,<span class="function">(<span class="params">err,data</span>)=&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h4 id="promise构造器"><a href="#promise构造器" class="headerlink" title="promise构造器"></a>promise构造器</h4><p>Promise是一个构造器，用来创建Promise类型的对象 。就好像Array是一个构造器，用来创建数组</p><h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><p> <img src="/wiki/promise/1.png" alt="1.png"><br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">ok,err</span>)=&gt;</span>&#123;</span><br><span class="line"> <span class="comment">//某个条件下，执行ok()</span></span><br><span class="line"><span class="comment">// 某个条件下，执行err</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li><a href></a></li><li><a href></a></li></ul></blockquote>]]></content>
     
@@ -35,6 +35,10 @@
     </summary>
     
     
+      <category term="promise" scheme="http://yoursite.com/categories/promise/"/>
+    
+    
+      <category term="promise" scheme="http://yoursite.com/tags/promise/"/>
     
   </entry>
   
