@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/wiki/%E9%97%AD%E5%8C%85/</loc>
+    
+    <lastmod>2020-08-23T02:39:35.769Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/wiki/MVVM/</loc>
     
     <lastmod>2020-08-21T09:13:22.067Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://yoursite.com/wiki/%E8%B7%A8%E5%9F%9F/</loc>
     
     <lastmod>2020-08-20T08:48:01.118Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/wiki/%E9%97%AD%E5%8C%85/</loc>
-    
-    <lastmod>2020-08-20T08:46:43.388Z</lastmod>
     
   </url>
   
